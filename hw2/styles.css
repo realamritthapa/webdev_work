@@ -13,7 +13,7 @@
 }
 
 body {
-  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1.2em;
   color: var(--black);
 }
@@ -27,7 +27,30 @@ form {
 }
 
 /* Code for exercise 01-navbar */
+nav {
+  background-color: black;
+  height: 60px;
+  margin: auto;
+  overflow: hidden;
+  text-align: right;
+  position: relative;
+}
+@media (max-width: 700px) {
+  nav {
+    text-align: center;
+  }
+}
 
+a {
+  text-decoration: none;
+  line-height: 60px;
+  color: white;
+  padding: 40px;
+  vertical-align: middle;
+}
+a:hover {
+  background-color: purple;
+}
 /* Code for exercise 02-cards */
 
 /* Code for exercise 03-table */
