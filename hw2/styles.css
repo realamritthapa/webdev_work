@@ -16,6 +16,7 @@ body {
   font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1.2em;
   color: var(--black);
+  margin: 0;
 }
 
 h1 {
@@ -28,28 +29,32 @@ form {
 
 /* Code for exercise 01-navbar */
 nav {
-  background-color: black;
+  background-color: var(--black);
   height: 60px;
-  margin: auto;
-  overflow: hidden;
-  text-align: right;
-  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  align-items: center;
 }
 @media (max-width: 700px) {
   nav {
-    text-align: center;
+    justify-content: center;
+    justify-content: space-around;
   }
 }
-
+/* use costume prop
+fix navbar
+abvle to use flex*/
 a {
   text-decoration: none;
-  line-height: 60px;
-  color: white;
-  padding: 40px;
-  vertical-align: middle;
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  height: 100%;
+  padding: 0px 25px;
 }
 a:hover {
-  background-color: purple;
+  background-color: var(--violetred);
 }
 /* Code for exercise 02-cards */
 
