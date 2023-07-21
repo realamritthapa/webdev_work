@@ -28,7 +28,7 @@ form {
 }
 
 /* Code for exercise 01-navbar */
-nav {
+.navbar {
   background-color: var(--black);
   height: 60px;
   width: 100%;
@@ -37,7 +37,7 @@ nav {
   align-items: center;
 }
 @media (max-width: 700px) {
-  nav {
+  .navbar {
     justify-content: center;
     justify-content: space-around;
   }
@@ -45,7 +45,7 @@ nav {
 /* use costume prop
 fix navbar
 abvle to use flex*/
-a {
+.links {
   text-decoration: none;
   color: var(--white);
   display: flex;
@@ -53,11 +53,49 @@ a {
   height: 100%;
   padding: 0px 25px;
 }
-a:hover {
+.links:hover {
   background-color: var(--violetred);
 }
 /* Code for exercise 02-cards */
+.card-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-bottom: 5%;
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+  width: 31%;
+  border: 1px solid var(--black);
+  align-items: center;
+  padding: 15px;
+}
 
+.info_btn,
+.cat_paragraph {
+  width: 80%;
+}
+.info_btn {
+  background-color: var(--black);
+  color: var(--white);
+  height: 50px;
+}
+
+.info_btn:hover {
+  background-color: var(--violetred);
+}
+
+@media (max-width: 700px) {
+  .card-container {
+    flex-direction: column;
+  }
+
+  .cards {
+    width: 90%;
+    margin-bottom: 5%;
+    align-self: center;
+  }
+}
 /* Code for exercise 03-table */
 
 /* Code for exercise 04-form */
