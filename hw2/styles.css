@@ -42,9 +42,7 @@ form {
     justify-content: space-around;
   }
 }
-/* use costume prop
-fix navbar
-abvle to use flex*/
+
 .links {
   text-decoration: none;
   color: var(--white);
@@ -133,3 +131,64 @@ table {
 }
 
 /* Code for exercise 04-form */
+h2,
+h3 {
+  margin-bottom: 0;
+}
+p {
+  color: var(--gray);
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.form-container {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.form {
+  margin: 0 auto;
+  border: 1px solid var(--black);
+  border-radius: 3%;
+  padding: 20px 10px 15px;
+}
+
+.form-item {
+  display: flex;
+  justify-content: space-between;
+}
+.form-label {
+  font-weight: bold;
+}
+
+.form-input {
+  width: 60%;
+}
+
+.btn-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.btn {
+  border: 1px solid var(--black);
+  width: 45%;
+  height: 30px;
+}
+.btn-primary {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.btn-primary:hover {
+  background-color: var(--violetred);
+}
+
+.btn-secondary {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+.btn-secondary:hover {
+  background-color: lightgray;
+}
