@@ -14,8 +14,8 @@
       <form class="form" action="/submit">
         <div class="form-container">
           <div class="form-intro">
-            <h2>Sign Up Form</h2>
-            <p>Fill up the items in the form below.</p>
+            <h2 class="form-header">Sign Up Form</h2>
+            <p class="sub-title">Fill up the items in the form below.</p>
           </div>
           <div class="form-item">
             <label class="form-label" for="name">Name:</label>
@@ -48,8 +48,8 @@
             <input class="form-input" type="date" id="date" name="date" />
           </div>
 
-          <div class="radio-container">
-            <h3>Perferred Pronouns</h3>
+          <fieldset class="radio-container">
+            <legend class="legend">Preferred Pronouns</legend>
             <div class="radio-item">
               <input type="radio" name="pronoun" id="first" />
               <label for="first">She/her</label>
@@ -66,7 +66,7 @@
               <input type="radio" name="pronoun" id="forth" />
               <label for="forth">I prefer not to say</label>
             </div>
-          </div>
+          </fieldset>
           <div class="btn-container">
             <input class="btn btn-primary" type="submit" value="Submit" />
             <input class="btn btn-secondary" type="reset" value="Reset" />

@@ -36,6 +36,7 @@ form {
   justify-content: end;
   align-items: center;
 }
+
 @media (max-width: 700px) {
   .navbar {
     justify-content: center;
@@ -51,15 +52,18 @@ form {
   height: 100%;
   padding: 0px 25px;
 }
+
 .links:hover {
   background-color: var(--violetred);
 }
+
 /* Code for exercise 02-cards */
 .card-container {
   display: flex;
   justify-content: space-evenly;
   margin-bottom: 5%;
 }
+
 .cards {
   display: flex;
   flex-direction: column;
@@ -73,6 +77,7 @@ form {
 .cat_paragraph {
   width: 80%;
 }
+
 .info_btn {
   background-color: var(--black);
   color: var(--white);
@@ -94,10 +99,12 @@ form {
     align-self: center;
   }
 }
+
 /* Code for exercise 03-table */
-table {
+.table {
   margin: 0 auto;
 }
+
 .time,
 .channels,
 .shows {
@@ -131,32 +138,40 @@ table {
 }
 
 /* Code for exercise 04-form */
-h2,
-h3 {
+.form-header {
   margin-bottom: 0;
 }
-p {
+
+.legend {
+  font-weight: bold;
+}
+
+.sub-title {
   color: var(--gray);
   margin-top: 0;
   margin-bottom: 0;
 }
+
 .form-container {
   height: 500px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
+
 .form {
   margin: 0 auto;
   border: 1px solid var(--black);
   border-radius: 3%;
   padding: 20px 10px 15px;
+  margin-bottom: 10px;
 }
 
 .form-item {
   display: flex;
   justify-content: space-between;
 }
+
 .form-label {
   font-weight: bold;
 }
@@ -165,9 +180,16 @@ p {
   width: 60%;
 }
 
+.radio-container {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
 .btn-container {
   display: flex;
   justify-content: space-evenly;
+  margin-bottom: 15px;
 }
 
 .btn {
@@ -175,6 +197,7 @@ p {
   width: 45%;
   height: 30px;
 }
+
 .btn-primary {
   background-color: var(--black);
   color: var(--white);
