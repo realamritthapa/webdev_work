@@ -97,5 +97,39 @@ abvle to use flex*/
   }
 }
 /* Code for exercise 03-table */
+table {
+  margin: 0 auto;
+}
+.time,
+.channels,
+.shows {
+  border: 1px solid black;
+  width: 200px;
+  height: 60px;
+}
+
+.time,
+.channels {
+  text-align: center;
+  font-weight: bold;
+}
+
+.time {
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.channels {
+  background-color: var(--violetred);
+  color: var(--white);
+}
+
+.row:hover {
+  background-color: var(--orange);
+}
+
+.shows {
+  padding: 10px;
+}
 
 /* Code for exercise 04-form */
