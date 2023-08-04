@@ -17,6 +17,7 @@ let result = fetchData("https://swapi.dev/api/starships/")
 
 const createSpaceshipComponent = (spaceship) => {
   const container = document.createElement("section"); // do not modify this line
+  container.setAttribute("class", "container");
   const name_credit = document.createElement("div");
   name_credit.setAttribute("class", "name_credit");
 
@@ -26,11 +27,15 @@ const createSpaceshipComponent = (spaceship) => {
 
   const credit_item = document.createElement("div");
   credit_item.setAttribute("class", "credit");
-  credit_item.innerText = spaceship.cost_in_credits;
+  const cost = Number(spaceship.cost_in_credits);
+  credit_item.innerText = `${cost.toLocaleString()} credits`;
 
   const manufacture = document.createElement("div");
   manufacture.setAttribute("class", "manufacture");
   manufacture.innerText = `Manufactured by ${spaceship.manufacturer}`;
+
+  const speed_cargo = document.createElement("div");
+  speed_cargo.setAttribute("class", "speed_cargo");
 
   const speed_label = document.createElement("div");
   speed_label.setAttribute("class", "speed_label");
@@ -42,11 +47,34 @@ const createSpaceshipComponent = (spaceship) => {
   const speed_name = document.createElement("div");
   speed_name.setAttribute("class", "speed_name");
   speed_name.innerText = "Max atmosphering speed";
+
+  const cap_label = document.createElement("div");
+  cap_label.setAttribute("class", "cap_label");
+
+  const cargo = document.createElement("div");
+  cargo.setAttribute("class", "cargo");
+  const carg_cap = Number(spaceship.cargo_capacity);
+  cargo.innerText = carg_cap.toLocaleString();
+
+  const cargo_label = document.createElement("div");
+  cargo_label.setAttribute("div", "cargo_label");
+  cargo_label.innerText = "Cargo capacity";
+
+  cap_label.appendChild(cargo);
+  cap_label.appendChild(cargo_label);
+
+  speed_label.appendChild(speed);
+  speed_label.appendChild(speed_name);
+
+  speed_cargo.appendChild(speed_label);
+  speed_cargo.appendChild(cap_label);
+
   name_credit.appendChild(name_item);
   name_credit.appendChild(credit_item);
 
   container.appendChild(name_credit);
   container.appendChild(manufacture);
+  container.appendChild(speed_cargo);
 
   return container; // do not modify this line
 };
@@ -60,7 +88,6 @@ const filterStarships = (input) => {
       (Number(ships.passengers) < 10 && Number(ships.crew) > 1) ||
       ships.passengers == "n/a"
     );
-    console.log(Number(ships.passengers));
   });
   console.log(filterd);
   return filterd;

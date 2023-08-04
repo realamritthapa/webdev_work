@@ -40,6 +40,40 @@ form {
 /* Code for exercise 03-starships */
 .name_credit {
   display: flex;
+  justify-content: space-between;
+}
+
+.speed_label,
+.cap_label {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  align-items: center;
+}
+
+.speed_label {
+  border-right: 1px solid var(--light-gray);
+}
+.name,
+.credit,
+.speed,
+.cargo {
+  font-weight: bold;
+}
+.speed_cargo {
+  display: flex;
+  justify-content: space-between;
+}
+.container {
+  background-color: var(--white);
+  justify-content: space-around;
+  border-radius: 10px;
+  width: 48%;
+  height: 200px;
+  margin: 10px;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
 }
 
 .btn-group {
