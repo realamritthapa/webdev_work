@@ -19,7 +19,7 @@ html {
 }
 
 body {
-  font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-family: "Open Sans", "Helvetica Neue", sans-serif;
   font-size: 1.2em;
   color: var(--black);
 }
@@ -38,6 +38,9 @@ form {
 /* Code for exercise 02-form */
 
 /* Code for exercise 03-starships */
+.name_credit {
+  display: flex;
+}
 
 .btn-group {
   margin: auto;
@@ -50,4 +53,10 @@ form {
 .btn {
   width: 80px;
   padding: 10px;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+.btn:hover {
+  background-color: var(--violetred);
 }
