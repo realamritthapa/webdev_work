@@ -57,7 +57,7 @@ const createSpaceshipComponent = (spaceship) => {
   cargo.innerText = carg_cap.toLocaleString();
 
   const cargo_label = document.createElement("div");
-  cargo_label.setAttribute("div", "cargo_label");
+  cargo_label.setAttribute("class", "cargo_label");
   cargo_label.innerText = "Cargo capacity";
 
   cap_label.appendChild(cargo);

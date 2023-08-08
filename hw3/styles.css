@@ -42,7 +42,12 @@ form {
   display: flex;
   justify-content: space-between;
 }
-
+.manufacture {
+  font-size: medium;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
 .speed_label,
 .cap_label {
   display: flex;
@@ -59,6 +64,13 @@ form {
 .speed,
 .cargo {
   font-weight: bold;
+}
+.speed_name,
+.cargo_label {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  text-align: center;
 }
 .speed_cargo {
   display: flex;
