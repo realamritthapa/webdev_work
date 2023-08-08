@@ -38,44 +38,50 @@ form {
 /* Code for exercise 02-form */
 
 /* Code for exercise 03-starships */
-.name_credit {
+.name-credit {
   display: flex;
   justify-content: space-between;
 }
+
 .manufacture {
   font-size: medium;
   padding-top: 10px;
   padding-bottom: 10px;
   margin-bottom: 10px;
 }
-.speed_label,
-.cap_label {
+
+.speed-label,
+.cap-label {
   display: flex;
   flex-direction: column;
   width: 50%;
   align-items: center;
 }
 
-.speed_label {
+.speed-label {
   border-right: 1px solid var(--light-gray);
 }
+
 .name,
 .credit,
 .speed,
 .cargo {
   font-weight: bold;
 }
-.speed_name,
-.cargo_label {
+
+.speed-name,
+.cargo-label {
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
   text-align: center;
 }
-.speed_cargo {
+
+.speed-cargo {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
+
 .container {
   background-color: var(--white);
   justify-content: space-around;
@@ -105,4 +111,10 @@ form {
 
 .btn:hover {
   background-color: var(--violetred);
+}
+
+@media (max-width: 700px) {
+  .container {
+    width: 98%;
+  }
 }

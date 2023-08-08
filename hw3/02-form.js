@@ -25,7 +25,6 @@ form.addEventListener("submit", (event) => {
   let new_date = `${months[month]} ${parseInt(day, 10)}, ${year}`;
   let pronoun = form.elements.namedItem("pronoun");
   let pronoun_value = "";
-  let elem = document.querySelectorAll("label.forth");
 
   for (let i = 0; i < pronoun.length; ++i) {
     if (pronoun[i].checked) {

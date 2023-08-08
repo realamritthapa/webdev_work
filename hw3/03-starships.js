@@ -9,7 +9,6 @@ let starships;
 let result = fetchData("https://swapi.dev/api/starships/")
   .then((data) => {
     starships = data;
-    console.log(starships);
   })
   .catch((error) => {
     console.error(error);
@@ -18,8 +17,9 @@ let result = fetchData("https://swapi.dev/api/starships/")
 const createSpaceshipComponent = (spaceship) => {
   const container = document.createElement("section"); // do not modify this line
   container.setAttribute("class", "container");
+
   const name_credit = document.createElement("div");
-  name_credit.setAttribute("class", "name_credit");
+  name_credit.setAttribute("class", "name-credit");
 
   const name_item = document.createElement("div");
   name_item.setAttribute("class", "name");
@@ -27,6 +27,7 @@ const createSpaceshipComponent = (spaceship) => {
 
   const credit_item = document.createElement("div");
   credit_item.setAttribute("class", "credit");
+
   const cost = Number(spaceship.cost_in_credits);
   credit_item.innerText = `${cost.toLocaleString()} credits`;
 
@@ -35,29 +36,30 @@ const createSpaceshipComponent = (spaceship) => {
   manufacture.innerText = `Manufactured by ${spaceship.manufacturer}`;
 
   const speed_cargo = document.createElement("div");
-  speed_cargo.setAttribute("class", "speed_cargo");
+  speed_cargo.setAttribute("class", "speed-cargo");
 
   const speed_label = document.createElement("div");
-  speed_label.setAttribute("class", "speed_label");
+  speed_label.setAttribute("class", "speed-label");
 
   const speed = document.createElement("div");
   speed.setAttribute("class", "speed");
   speed.innerText = spaceship.max_atmosphering_speed;
 
   const speed_name = document.createElement("div");
-  speed_name.setAttribute("class", "speed_name");
+  speed_name.setAttribute("class", "speed-name");
   speed_name.innerText = "Max atmosphering speed";
 
   const cap_label = document.createElement("div");
-  cap_label.setAttribute("class", "cap_label");
+  cap_label.setAttribute("class", "cap-label");
 
   const cargo = document.createElement("div");
   cargo.setAttribute("class", "cargo");
+
   const carg_cap = Number(spaceship.cargo_capacity);
   cargo.innerText = carg_cap.toLocaleString();
 
   const cargo_label = document.createElement("div");
-  cargo_label.setAttribute("class", "cargo_label");
+  cargo_label.setAttribute("class", "cargo-label");
   cargo_label.innerText = "Cargo capacity";
 
   cap_label.appendChild(cargo);
@@ -89,7 +91,6 @@ const filterStarships = (input) => {
       ships.passengers == "n/a"
     );
   });
-  console.log(filterd);
   return filterd;
 };
 
